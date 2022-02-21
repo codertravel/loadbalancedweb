@@ -6,7 +6,7 @@ on:
     branches:
       - master
     paths:
-      - nginx/*
+      - nginx-web/*
 
 jobs:
   build:
@@ -25,4 +25,4 @@ jobs:
         with:
           push: true
           tags: codertravel/nginx-web:latest
-          context: ./nginx
+          context: ./nginx-web

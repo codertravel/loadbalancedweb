@@ -8,7 +8,7 @@ on:
       - reopened
       - edited
     paths:
-      - nginx/*
+      - nginx-web/*
 
 jobs:
   build:
@@ -18,4 +18,4 @@ jobs:
       - name: Build nginx
         uses: docker/build-push-action@v2
         with:
-          context: ./nginx
+          context: ./nginx-web
