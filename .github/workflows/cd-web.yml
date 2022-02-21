@@ -25,3 +25,4 @@ jobs:
         with:
           push: true
           tags: codertravel/nginx-web:latest
+          context: ./nginx
