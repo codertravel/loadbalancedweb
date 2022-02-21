@@ -5,3 +5,11 @@ services:
     image: codertravel/nginx-web:latest
     ports:
       - "80:80"
+
+  haproxy-lb:
+    build:
+      context: ./haproxy-lb
+      dockerfile: Dockerfile
+    image: haproxy-lb
+    ports:
+      - "8080:8080"
