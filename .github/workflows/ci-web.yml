@@ -1,0 +1,17 @@
+name: '[CI] Web'
+
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+    paths:
+      - nginx/*
+
+jobs:
+  build:
+    - uses: actions/checkout@v1
+    - name: Build nginx
+      uses: docker/build-push-action@v2
+      with:
+        context: ./nginx
