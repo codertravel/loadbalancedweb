@@ -6,6 +6,8 @@ on:
     types:
       - opened
       - reopened
+    paths:
+      - nginx/*
 
 jobs:
   build:
