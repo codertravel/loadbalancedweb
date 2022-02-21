@@ -2,9 +2,6 @@ version: '3'
 
 services:
   web:
-    build:
-      context: ./nginx
-      dockerfile: Dockerfile
-    image: nginx-web
+    image: codertravel/nginx-web:latest
     ports:
       - "80:80"
