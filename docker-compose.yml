@@ -15,4 +15,7 @@ services:
     image: haproxy-lb
     ports:
       - "80:80"
+      - "443:443"
+    volumes:
+      - "${PWD}/selfsigned.pem:/usr/local/etc/ssl/certs/selfsigned.pem"
     restart: always
