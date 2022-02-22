@@ -9,10 +9,7 @@ services:
     restart: always
 
   haproxy-lb:
-    build:
-      context: ./haproxy-lb
-      dockerfile: Dockerfile
-    image: haproxy-lb
+    image: codertravel/haproxy-lb:latest
     ports:
       - "80:80"
     restart: always
