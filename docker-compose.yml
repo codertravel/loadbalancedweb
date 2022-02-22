@@ -1,8 +1,12 @@
 version: '3'
 
 services:
-  nginx-web:
+  nginx-web-1:
     image: codertravel/nginx-web:latest
+    restart: always
+  nginx-web-2:
+    image: codertravel/nginx-web:latest
+    restart: always
 
   haproxy-lb:
     build:
@@ -11,3 +15,4 @@ services:
     image: haproxy-lb
     ports:
       - "80:80"
+    restart: always
